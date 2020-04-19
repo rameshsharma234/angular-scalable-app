@@ -1,1 +1,45 @@
-<p>starwar-details works!</p>
+<div class="starwar-detail-view">
+    
+    <div class="row  border-bottom">
+        <div class="col col-3">Name</div>
+        <div class="col col-9">{{detailData?.name}}</div>
+    </div>
+    <div class="row  border-bottom">
+        <div class="col col-3">Height</div>
+        <div class="col col-9">{{detailData?.height}}</div>
+    </div>
+    <div class="row  border-bottom">
+        <div class="col col-3">Mass</div>
+        <div class="col col-9">{{detailData?.mass}}</div>
+    </div>
+    <div class="row  border-bottom">
+        <div class="col col-3">Hair Color</div>
+        <div class="col col-9">{{detailData?.hair_color}}</div>
+    </div>
+    <div class="row  border-bottom">
+        <div class="col col-3">Skin Color</div>
+        <div class="col col-9">{{detailData?.skin_color}}</div>
+    </div>
+    <div class="row  border-bottom">
+        <div class="col col-3">eye Color</div>
+        <div class="col col-9">{{detailData?.eye_color}}</div>
+    </div>
+    <div class="row  border-bottom">
+        <div class="col col-3">Birth year</div>
+        <div class="col col-9">{{detailData?.birth_year}}</div>
+    </div>
+    <div class="row  border-bottom">
+        <div class="col col-3">Gender</div>
+        <div class="col col-9">{{detailData?.gender}}</div>
+    </div>
+
+   
+    <div class="row">
+        <div class="title col-12">Films</div>
+        <div class="col-6"  *ngFor= "let film of detailData?.films">
+            <div class="card">
+                <app-film-pie-chart [film]="film"></app-film-pie-chart>
+            </div>
+        </div>
+    </div>
+</div>
